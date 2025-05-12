@@ -1,44 +1,63 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 content = """
+<!DOCTYPE html>
 <html>
-<title>Top Software Industries</title>
+<head>
+    <title>TCP/IP Layers and Protocols</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            text-align: center;
+        }
+        h2 {
+            color: #0096FF;
+            margin-top: 30px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+        th {
+            background-color: #0096FF;
+            color: #000000;
+        }
+    </style>
+</head>
 <body>
-<table border="2" cellspacing="10" cellpadding="6">
-<caption>Top 5 Revenue Generating Software Companies</caption>
-<tr>
-  <th>s.no</th>
-  <th>companies</th>
-  <th>revenue</th>
-</tr>
-<tr>
-  <th>1</th>
-  <th>Microsoft</th>
-  <th>65 billion</th>
-</tr>
-<tr>
-  <th>2</th>
-  <th>Oracle</th>
-  <th>29.6 billion</th>
-</tr>
-<tr>
-  <th>3</th>
-  <th>IBM</th>
-  <th>29.1 billion</th>
-</tr>
-<tr>
-  <th>4</th>
-  <th>SAP</th>
-  <th>16.4 billion</th>
-</tr>
-<tr>
-  <th>5</th>
-  <th>Symantec</th>
-  <th>5.6 billion</th>
-</tr>
-</table>
+    <h2>TCP/IP Layers and Protocols</h2>
+    <table>
+        <tr>
+            <th>TCP/IP Layers</th>
+            <th>Protocols (Examples)</th>
+        </tr>
+        <tr>
+            <td>Application Layer</td>
+            <td>HTTP, RDP, DNS, SMTP, Telnet, SNMP</td>
+        </tr>
+        <tr>
+            <td>Transport Layer</td>
+            <td>TCP, UDP</td>
+        </tr>
+        <tr>
+            <td>Internet Layer</td>
+            <td>ICMP, IGMP, ARP, IP, IPSec</td>
+        </tr>
+        <tr>
+            <td>Network Access Layer</td>
+            <td>Ethernet (IEEE 802.3), Token Ring, PPP, Frame Relay</td>
+        </tr>
+    </table>
 </body>
-</html> 
+</html>
 """
 
 class myhandler(BaseHTTPRequestHandler):
